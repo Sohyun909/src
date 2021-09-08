@@ -1,5 +1,4 @@
-package memoryGame;
-
+package project;
 
 import java.awt.Color;
 import java.awt.Font;
@@ -84,7 +83,6 @@ public class Login extends JFrame implements ActionListener {
 		jbtnLogin.setForeground(Color.white);
 		jbtnLogin.setFocusPainted(false);		// 포커스 표시 설정
 		
-		
 		// 컴포넌트 부착
 		jp.add(jlId);
 		jp.add(jlPw);
@@ -93,7 +91,6 @@ public class Login extends JFrame implements ActionListener {
 		jp.add(jbtnLogin);
 		jp.add(jbtnRegister);
 		add(jp);
-		
 		
 		// 이벤트 처리
 		jbtnLogin.addActionListener(this);
@@ -139,12 +136,11 @@ public class Login extends JFrame implements ActionListener {
 			// 로그인 성공 (ID, PW 일치)
 			if(loginPass) {
 				
+				// 메뉴창 띄우기
+				Menu m = new Menu(id);
+				
 				// 현재 창 비활성화
 				this.setVisible(false);
-				
-				// 메뉴창 띄우기
-				Menu m = new Menu();
-				
 			}
 			// 로그인 실패 (ID, PW 불일치 or 존재하지 않음)
 			else {
@@ -165,3 +161,4 @@ public class Login extends JFrame implements ActionListener {
 	}// actionPerformed() end
 	
 }// Login class end
+

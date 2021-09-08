@@ -1,5 +1,4 @@
-package memoryGame;
-
+package project;
 
 import java.awt.Color;
 import java.awt.Font;
@@ -13,6 +12,7 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
+
 public class Menu extends JFrame implements ActionListener {
 	
 	JPanel jpBackground;
@@ -20,10 +20,11 @@ public class Menu extends JFrame implements ActionListener {
 	
 	Image background = new ImageIcon
 			(Menu.class.getResource("../img/backgroundMain.jpg")).getImage();
+	String id = "null_id";
 	
 
-	Menu() {
-		
+	public Menu(String id) {
+		this.id = id;
 		// 컴포넌트 생성
 		jpBackground = new JPanel() {
 			@Override
@@ -76,7 +77,7 @@ public class Menu extends JFrame implements ActionListener {
 	
 	
 	public static void main(String[] args) {
-		Menu m = new Menu();
+		Menu m = new Menu("null");
 	}
 
 
@@ -85,10 +86,11 @@ public class Menu extends JFrame implements ActionListener {
 		
 		// 게임시작 버튼 
 		if(e.getSource() == jbtnStart) {
-			this.setVisible(false);
-			
 			// 카드 게임 실행
-			CardGame cg = new CardGame();
+			CardGame cg = new CardGame(id);
+			cg.setGame();
+			
+			this.setVisible(false);
 		}
 		// 랭킹 버튼
 		else if(e.getSource() == jbtnRank) {

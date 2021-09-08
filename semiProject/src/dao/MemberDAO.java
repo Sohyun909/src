@@ -1,6 +1,8 @@
 package dao;
 
 
+
+
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -14,7 +16,7 @@ public class MemberDAO {
 	
 	// 1. 변수 선언
 	String driver = "oracle.jdbc.driver.OracleDriver";
-	String url = "jdbc:oracle:thin:@mydb.cj2lbyl40tfv.ap-northeast-2.rds.amazonaws.com:1521:ORCL";
+	String url = "jdbc:oracle:thin:@mydb.cax7alvdqjnf.ap-northeast-2.rds.amazonaws.com:1521:ORCL";
 	String user = "scott";
 	String password = "tigertiger1";
 	Connection conn = null;

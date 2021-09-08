@@ -1,7 +1,5 @@
-package memoryGame;
+package project;
 
-
-import javax.swing.ImageIcon;
 import javax.swing.JButton;
 
 import vo.CardVO;
@@ -29,6 +27,5 @@ public class CardButton extends JButton{
 	public void setIndex(int index) {
 		this.index = index;
 	}
-	
 	
 }

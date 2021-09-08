@@ -1,5 +1,4 @@
-package memoryGame;
-
+package project;
 
 import java.awt.Color;
 import java.awt.Font;
